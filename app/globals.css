@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Anton&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-trapped-black text-trapped-white font-body;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  @apply font-heading;
+}
+
+h1 {
+  @apply text-6xl lg:text-8xl tracking-tight;
+}
+
+h2 {
+  @apply text-4xl lg:text-6xl;
+}
+
+h3 {
+  @apply text-2xl lg:text-4xl;
+}
+
+.btn-primary {
+  @apply bg-trapped-accent-red hover:bg-red-600 text-white px-8 py-3 transition-all duration-300 uppercase tracking-widest font-semibold;
+}
+
+.btn-secondary {
+  @apply bg-transparent border-2 border-trapped-white hover:bg-trapped-white hover:text-trapped-black text-white px-8 py-3 transition-all duration-300 uppercase tracking-widest font-semibold;
+}
+
+.btn-ghost {
+  @apply text-trapped-white hover:text-trapped-accent-red transition-colors duration-300 uppercase tracking-widest font-semibold;
+}
+
+.glass {
+  @apply bg-white/10 backdrop-blur-md border border-white/20;
+}
+
+.glass-dark {
+  @apply bg-black/30 backdrop-blur-md border border-white/10;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-trapped-charcoal;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-trapped-accent-red rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-red-600;
+}
+
+::selection {
+  @apply bg-trapped-accent-red text-white;
+}
+
+@layer components {
+  .transition-smooth {
+    @apply transition-all duration-300 ease-out;
+  }
+
+  .transition-fast {
+    @apply transition-all duration-150 ease-out;
+  }
+
+  .transition-slow {
+    @apply transition-all duration-500 ease-out;
+  }
+
+  .container-trapped {
+    @apply max-w-7xl mx-auto px-6;
+  }
+
+  .section-heading {
+    @apply text-5xl md:text-7xl font-heading font-bold mb-4;
+  }
+
+  .section-subheading {
+    @apply text-trapped-light-gray text-lg;
+  }
+}
